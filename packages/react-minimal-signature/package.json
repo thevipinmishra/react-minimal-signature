@@ -1,0 +1,51 @@
+{
+  "name": "react-minimal-signature",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "types": "./dist/index.d.ts",
+  "style": "./rmc.css",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./*": "./*"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist/**",
+    "*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "build-css": "lightningcss --minify --targets '>= 0.25%' --bundle src/index.css -o rmc.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ark-ui/react": "^3.9.0",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "lightningcss": "^1.26.0",
+    "lightningcss-cli": "^1.26.0",
+    "tsup": "^8.2.4"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "package": "pnpm --filter react-minimal-signature",
+    "docs": "pnpm --filter docs",
+    "build-package": "pnpm --filter react-minimal-signature run build",
+    "build-css": "pnpm --filter react-minimal-signature run build-css",
+    "watch-package": "pnpm --filter react-minimal-signature run dev"
+  },
+  "author": "Vipin Mishra",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3"
+  },
+  "dependencies": {
+    "lint-staged": "15.2.9",
+    "simple-git-hooks": "2.11.1"
+  }
+}
