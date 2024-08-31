@@ -1,7 +1,7 @@
 {
   "name": "react-minimal-signature",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A customizable React signature pad component.",
   "main": "index.js",
   "types": "./dist/index.d.ts",
   "style": "./rmc.css",
@@ -28,7 +28,9 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "build-css": "lightningcss --minify --targets '>= 0.25%' --bundle src/index.css -o rmc.css"
+    "build-css": "lightningcss --minify --targets '>= 0.25%' --bundle src/index.css -o rmc.css",
+    "build-package": "pnpm run build && pnpm run build-css",
+    "publish-build": "pnpm run build-package && npm publish"
   },
   "keywords": [],
   "author": "",
