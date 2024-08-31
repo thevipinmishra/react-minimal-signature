@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
+  font-family: inherit;
 
   & * {
     box-sizing: border-box;
@@ -37,15 +38,26 @@
     font-size: 14px;
     font-weight: 500;
     color: #495057;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    padding: 8px 12px;
+    border-radius: 4px;
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: #e9ecef;
+    }
   }
 
   [data-part="guide"] {
     position: absolute;
     left: 16px;
     right: 16px;
-    border-bottom-width: 1px;
-    border-style: dashed;
-    border-color: #495057;
+    border-bottom: 1px dashed #495057;
     bottom: 16px;
 
     &[data-disabled] {
