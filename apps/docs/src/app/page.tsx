@@ -1,5 +1,6 @@
 "use client";
 
+import Preview from "@/components/docs/Preview";
 import { useState } from "react";
 import { ReactMinimalSignature } from "react-minimal-signature";
 import "react-minimal-signature/rmc.css";
@@ -8,15 +9,18 @@ export default function Home() {
   const [imageUrl, setImageUrl] = useState("");
   const [drawing, setDrawing] = useState<Boolean>(false);
   return (
-    <div className="p-10 space-y-8">
-      <ReactMinimalSignature label="Sign Here" />
+    <main className="container space-y-8 py-10">
+      <Preview title="Default">
+        <ReactMinimalSignature label="Sign Here" />
+      </Preview>
 
-      <ReactMinimalSignature label="No Guide" withGuide={false} />
+      <Preview title="No Guide">
+        <ReactMinimalSignature label="Signature" withGuide={false} />
+      </Preview>
 
-      <div>
+      <Preview title="Render image preview">
         <ReactMinimalSignature
           label="No Clear Trigger"
-          withClearTrigger={false}
           onDraw={() => setDrawing(true)}
           onDrawEnd={(details) => {
             setDrawing(false);
@@ -28,7 +32,7 @@ export default function Home() {
         {imageUrl && (
           <img src={imageUrl} className="w-[200px] mx-auto" alt="Signature" />
         )}
-      </div>
-    </div>
+      </Preview>
+    </main>
   );
 }
