@@ -4,7 +4,6 @@ import {
   SignaturePad,
   type SignaturePadRootProps,
 } from "@ark-ui/react/signature-pad";
-import clsx from "clsx";
 import { ElementRef, forwardRef } from "react";
 
 export interface ReactMinimalSignatureProps extends SignaturePadRootProps {
@@ -35,7 +34,7 @@ const ReactMinimalSignature = forwardRef<
   return (
     <SignaturePad.Root
       ref={ref}
-      className={clsx("rmc-root", className, classNames?.root)}
+      className={`rmc-root ${className} ${classNames?.root}`}
       {...rest}
     >
       {label ? (

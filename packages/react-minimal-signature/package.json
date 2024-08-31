@@ -34,8 +34,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ark-ui/react": "^3.9.0",
-    "clsx": "^2.1.1"
+    "@ark-ui/react": "^3.9.0"
   },
   "devDependencies": {
     "@types/react": "^18",
