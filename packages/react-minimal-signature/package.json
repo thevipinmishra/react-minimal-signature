@@ -1,6 +1,6 @@
 {
   "name": "react-minimal-signature",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A customizable React signature pad component.",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -18,13 +18,8 @@
     },
     "./*": "./*"
   },
-  "sideEffects": [
-    "*.css"
-  ],
-  "files": [
-    "dist/**",
-    "*.css"
-  ],
+  "sideEffects": ["*.css"],
+  "files": ["dist/**", "*.css"],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -32,8 +27,8 @@
     "build-package": "pnpm run build && pnpm run build-css",
     "publish-build": "pnpm run build-package && npm publish"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["signature", "react", "signature-pad"],
+  "author": "Vipin Mishra",
   "license": "ISC",
   "dependencies": {
     "@ark-ui/react": "^3.9.0"

@@ -1,10 +1,10 @@
-import { codeToHtml } from "shiki";
 import {
-  transformerNotationHighlight,
   transformerNotationDiff,
+  transformerNotationHighlight,
 } from "@shikijs/transformers";
-import type { BundledLanguage, BundledTheme } from "shiki";
 import { useEffect, useState } from "react";
+import { codeToHtml } from "shiki";
+import type { BundledLanguage, BundledTheme } from "shiki";
 // import CopyToClipboard from "./CopyToClipboard";
 
 type Props = {

@@ -5,13 +5,12 @@
     "build-package": "pnpm --filter react-minimal-signature run build-package",
     "build-css": "pnpm --filter react-minimal-signature run build-css",
     "watch-package": "pnpm --filter react-minimal-signature run dev",
-    "publish": "pnpm --filter react-minimal-signature run publish-build"
+    "publish": "pnpm --filter react-minimal-signature run publish-build",
+    "format": "biome check --write --no-errors-on-unmatched"
   },
   "author": "Vipin Mishra",
   "devDependencies": {
-    "@biomejs/biome": "1.8.3"
-  },
-  "dependencies": {
+    "@biomejs/biome": "1.8.3",
     "lint-staged": "15.2.9",
     "simple-git-hooks": "2.11.1"
   }
