@@ -26,33 +26,59 @@ yarn add react-minimal-signature
 
 ## Usage
 
+### Simple
+
 ```tsx
 import { ReactMinimalSignature } from "react-minimal-signature";
 // Import required styles
 import "react-minimal-signature/rmc.css";
 
 function App() {
+  return <ReactMinimalSignature label="Sign here" />;
+}
+
+export default App;
+```
+
+### Render image preview
+
+```tsx
+import { useState } from "react";
+import { ReactMinimalSignature } from "react-minimal-signature";
+import "react-minimal-signature/rmc.css";
+
+function App() {
+  const [imageUrl, setImageUrl] = useState("");
+  const [drawing, setDrawing] = useState<Boolean>(false);
   return (
-      <ReactMinimalSignature label="Sign here" />
+    <>
+      <ReactMinimalSignature
+        onDraw={() => setDrawing(true)}
+        onDrawEnd={(details) => {
+          setDrawing(false);
+          details.getDataUrl("image/png").then((url) => setImageUrl(url));
+        }}
+      />
+
+      {drawing && <span>Drawing...</span>}
+      {imageUrl && <img src={imageUrl} alt="Signature" />}
+    </>
   );
 }
 
 export default App;
-
 ```
 
 ## API Reference
 
-
-| Prop          | Type        | Default    | Description                               |
-|---------------|-------------|------------|-------------------------------------------|
-| `label`      | `string`      |  | Visible label for the Signature Pad        |
-| `withClearTrigger` | `boolean` | `true` | Boolean to handle the visibility of Clear trigger/button |
-| `withGuide` | `boolean` | `true` | Boolean to handle the visibility of guide line |
-| `onDraw`      | `(details: DrawDetails) => void`      |  | Callback when the signature pad is drawing.        |
-| `onDrawEnd`   | `(details: DrawEndDetails) => void`   | | Callback when the signature pad is done drawing.        |
-| `getRootNode`   | `() => ShadowRoot \| Node \| Document` |  | A root node to correctly resolve document in custom environments. E.x.: Iframes, Electron.        |
-| `drawing`   | `DrawingOptions` | `{ size: 2, simulatePressure: true }`  | The drawing options.       |
-| `disabled` | `boolean` | | Whether the signature pad is disabled. |
-| `classNames` | `{root?: string; label?: string; control?: string; clearTrigger?: string; guide?: string;}` | `{}` | Add custom classnames to respective DOM nodes. |
-
+| Prop               | Type                                                                                        | Default                               | Description                                                                                |
+| ------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `label`            | `string`                                                                                    |                                       | Visible label for the Signature Pad                                                        |
+| `withClearTrigger` | `boolean`                                                                                   | `true`                                | Boolean to handle the visibility of Clear trigger/button                                   |
+| `withGuide`        | `boolean`                                                                                   | `true`                                | Boolean to handle the visibility of guide line                                             |
+| `onDraw`           | `(details: DrawDetails) => void`                                                            |                                       | Callback when the signature pad is drawing.                                                |
+| `onDrawEnd`        | `(details: DrawEndDetails) => void`                                                         |                                       | Callback when the signature pad is done drawing.                                           |
+| `getRootNode`      | `() => ShadowRoot \| Node \| Document`                                                      |                                       | A root node to correctly resolve document in custom environments. E.x.: Iframes, Electron. |
+| `drawing`          | `DrawingOptions`                                                                            | `{ size: 2, simulatePressure: true }` | The drawing options.                                                                       |
+| `disabled`         | `boolean`                                                                                   |                                       | Whether the signature pad is disabled.                                                     |
+| `classNames`       | `{root?: string; label?: string; control?: string; clearTrigger?: string; guide?: string;}` | `{}`                                  | Add custom classnames to respective DOM nodes.                                             |

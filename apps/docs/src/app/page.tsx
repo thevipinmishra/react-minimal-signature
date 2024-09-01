@@ -1,6 +1,5 @@
 "use client";
 
-import Code from "@/components/docs/Code";
 import Preview from "@/components/docs/Preview";
 import { useState } from "react";
 import { ReactMinimalSignature } from "react-minimal-signature";
