@@ -1,6 +1,6 @@
 {
   "name": "react-minimal-signature",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A customizable React signature pad component.",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -20,6 +20,11 @@
   },
   "sideEffects": ["*.css"],
   "files": ["dist/**", "*.css"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thevipinmishra/react-signature-pad.git",
+    "directory": "packages/react-minimal-signature"
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
