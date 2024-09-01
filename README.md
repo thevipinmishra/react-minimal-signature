@@ -13,6 +13,10 @@ A minimal and easy to use Signature Pad component for React applications, requir
 - 🎨 Fully customizable
 - 🔧 TypeScript support
 
+## Demo
+
+[Live Demo](https://react-minimal-signature.vercel.app/)
+
 ## Installation
 
 To install the library, you can use npm, yarn or any other package manager:
