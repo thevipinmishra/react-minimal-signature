@@ -6,7 +6,8 @@
     "build-css": "pnpm --filter react-minimal-signature run build-css",
     "watch-package": "pnpm --filter react-minimal-signature run dev",
     "publish": "pnpm --filter react-minimal-signature run publish-build",
-    "format": "biome check --write --no-errors-on-unmatched"
+    "format": "biome check --write --no-errors-on-unmatched",
+    "build-docs": "pnpm run build-package && pnpm --filter docs run build"
   },
   "author": "Vipin Mishra",
   "devDependencies": {
