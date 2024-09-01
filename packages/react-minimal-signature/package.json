@@ -1,6 +1,6 @@
 {
   "name": "react-minimal-signature",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A customizable React signature pad component.",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -18,8 +18,14 @@
     },
     "./*": "./*"
   },
-  "sideEffects": ["*.css"],
-  "files": ["dist/**", "*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist/**",
+    "*.css",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/thevipinmishra/react-signature-pad.git",
@@ -32,7 +38,11 @@
     "build-package": "pnpm run build && pnpm run build-css",
     "publish-build": "pnpm run build-package && npm publish"
   },
-  "keywords": ["signature", "react", "signature-pad"],
+  "keywords": [
+    "signature",
+    "react",
+    "signature-pad"
+  ],
   "author": "Vipin Mishra",
   "license": "ISC",
   "dependencies": {
