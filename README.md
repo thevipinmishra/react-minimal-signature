@@ -3,14 +3,15 @@
 [![npm version](https://img.shields.io/npm/v/react-minimal-signature.svg?style=flat-square)](https://www.npmjs.com/package/react-awesome-library)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 
-A minimal and easy to use Signature Pad component for React applications, requires react v18 or above.
+A minimal and easy to use Signature Pad component for React applications, requires React version 18 or above.
+
+> Under the hood it utilizes [Ark UI](https://ark-ui.com/react/docs/components/signature-pad), a headless UI component library.
 
 ## Features
 
 - 🚀 Easy to use and integrate
 - 🎨 Fully customizable
 - 🔧 TypeScript support
-- 🌍 Well-documented and actively maintained
 
 ## Installation
 
@@ -82,3 +83,11 @@ export default App;
 | `drawing`          | `DrawingOptions`                                                                            | `{ size: 2, simulatePressure: true }` | The drawing options.                                                                       |
 | `disabled`         | `boolean`                                                                                   |                                       | Whether the signature pad is disabled.                                                     |
 | `classNames`       | `{root?: string; label?: string; control?: string; clearTrigger?: string; guide?: string;}` | `{}`                                  | Add custom classnames to respective DOM nodes.                                             |
+
+## Contributing
+
+Any improvements or suggestions are welcome. Feel free to open an issue or submit a pull request.
+
+## License
+
+[ISC](https://opensource.org/licenses/ISC)

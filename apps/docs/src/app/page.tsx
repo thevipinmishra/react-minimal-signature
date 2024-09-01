@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-dvh flex flex-col bg-white">
       <nav className="bg-cyan-50 py-10">
-        <div className="container flex items-center gap-4 flex-col">
+        <div className="max-w-4xl w-full mx-auto px-8 flex items-center gap-4 flex-col">
           <h2 className="font-bold -tracking-wide text-center text-cyan-950 text-xl">
             React Minimal Signature
           </h2>
@@ -35,18 +35,17 @@ export default function Home() {
           </a>
         </div>
       </nav>
-      <main className="container space-y-8 py-10">
-        <Preview title="Default">
+      <main className="max-w-4xl w-full mx-auto px-8 space-y-8 py-10">
+        <Preview title="Default with label">
           <ReactMinimalSignature label="Sign Here" />
         </Preview>
 
         <Preview title="No Guide">
-          <ReactMinimalSignature label="Signature" withGuide={false} />
+          <ReactMinimalSignature withGuide={false} />
         </Preview>
 
         <Preview title="Render image preview">
           <ReactMinimalSignature
-            label="No Clear Trigger"
             onDraw={() => setDrawing(true)}
             onDrawEnd={(details) => {
               setDrawing(false);
@@ -61,7 +60,7 @@ export default function Home() {
         </Preview>
       </main>
       <footer className="py-6">
-        <div className="container">
+        <div className="max-w-4xl w-full mx-auto px-8">
           <p className="text-xs text-center">
             Copyright {new Date().getFullYear()}. All rights reserved.
           </p>
