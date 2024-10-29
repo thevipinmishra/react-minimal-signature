@@ -11,8 +11,8 @@
   },
   "author": "Vipin Mishra",
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "lint-staged": "15.2.9",
+    "@biomejs/biome": "1.9.4",
+    "lint-staged": "15.2.10",
     "simple-git-hooks": "2.11.1"
   }
 }
