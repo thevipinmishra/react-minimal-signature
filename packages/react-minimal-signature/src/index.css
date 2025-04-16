@@ -1,4 +1,13 @@
 .rmc-root {
+  --rmc-control-bg-color: #f1f3f5;
+  --rmc-control-border-color: #ced4da;
+  --rmc-control-disabled-bg-color: #dee2e6;
+  --rmc-clear-trigger-color: #495057;
+  --rmc-clear-trigger-bg-color: transparent;
+  --rmc-clear-trigger-hover-bg-color: #e9ecef;
+  --rmc-guide-border-color: #495057;
+  --rmc-guide-disabled-border-color: #adb5bd;
+
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -21,12 +30,12 @@
     min-height: 200px;
     min-width: 0;
     position: relative;
-    background-color: #f1f3f5;
-    border: 1px dashed #ced4da;
+    background-color: var(--rmc-control-bg-color);
+    border: 1px dashed var(--rmc-control-border-color);
 
     &[data-disabled],
     &[aria-disabled="true"] {
-      background-color: #dee2e6;
+      background-color: var(--rmc-control-disabled-bg-color);
       cursor: not-allowed;
     }
   }
@@ -37,19 +46,20 @@
     right: 16px;
     font-size: 14px;
     font-weight: 500;
-    color: #495057;
-    background-color: transparent;
+    color: var(--rmc-clear-trigger-color);
+    background-color: var(--rmc-clear-trigger-bg-color);
     border: none;
     font-family: inherit;
     padding: 8px 12px;
     border-radius: 4px;
+    cursor: pointer;
 
     @media (prefers-reduced-motion: no-preference) {
-        transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
     }
 
     &:hover {
-        background-color: #e9ecef;
+      background-color: var(--rmc-clear-trigger-hover-bg-color);
     }
   }
 
@@ -57,11 +67,11 @@
     position: absolute;
     left: 16px;
     right: 16px;
-    border-bottom: 1px dashed #495057;
+    border-bottom: 1px dashed var(--rmc-guide-border-color);
     bottom: 16px;
 
     &[data-disabled] {
-      border-color: #adb5bd;
+      border-color: var(--rmc-guide-disabled-border-color);
     }
   }
 }

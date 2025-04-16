@@ -1,6 +1,6 @@
 {
   "name": "react-minimal-signature",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A customizable React signature pad component.",
   "main": "index.js",
   "types": "./dist/index.d.ts",
@@ -46,17 +46,18 @@
   "author": "Vipin Mishra",
   "license": "ISC",
   "dependencies": {
-    "@ark-ui/react": "^4.5.0"
+    "@ark-ui/react": "^5.6.0"
   },
   "devDependencies": {
-    "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.2",
-    "lightningcss": "^1.28.2",
-    "lightningcss-cli": "^1.28.2",
-    "tsup": "^8.3.5"
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "lightningcss": "^1.29.3",
+    "lightningcss-cli": "^1.29.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

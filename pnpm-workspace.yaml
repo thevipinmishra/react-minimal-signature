@@ -1,3 +1,9 @@
 packages:
-  - "packages/*"
-  - "apps/**"
+  - packages/*
+  - apps/**
+
+onlyBuiltDependencies:
+  - esbuild
+  - lightningcss-cli
+  - sharp
+  - simple-git-hooks
