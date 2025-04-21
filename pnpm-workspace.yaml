@@ -3,6 +3,7 @@ packages:
   - apps/**
 
 onlyBuiltDependencies:
+  - '@biomejs/biome'
   - esbuild
   - lightningcss-cli
   - sharp
