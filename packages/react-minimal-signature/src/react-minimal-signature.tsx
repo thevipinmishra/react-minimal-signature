@@ -6,6 +6,7 @@ import {
 } from "@ark-ui/react/signature-pad";
 import { ElementRef, forwardRef } from "react";
 
+/** @deprecated This package is no longer maintained. Use signetpad instead: https://www.npmjs.com/package/signetpad */
 export interface ReactMinimalSignatureProps extends SignaturePadRootProps {
   label?: string;
   withClearTrigger?: boolean;
@@ -19,6 +20,7 @@ export interface ReactMinimalSignatureProps extends SignaturePadRootProps {
   };
 }
 
+/** @deprecated This package is no longer maintained. Use signetpad instead: https://www.npmjs.com/package/signetpad */
 const ReactMinimalSignature = forwardRef<
   ElementRef<typeof SignaturePad.Root>,
   ReactMinimalSignatureProps

@@ -1,7 +1,8 @@
 {
   "name": "react-minimal-signature",
-  "version": "0.1.1",
-  "description": "A customizable React signature pad component.",
+  "version": "0.1.2",
+  "description": "DEPRECATED. Use signetpad instead: https://www.npmjs.com/package/signetpad",
+  "deprecated": "This package is deprecated and no longer maintained. Use signetpad instead: https://www.npmjs.com/package/signetpad",
   "main": "index.js",
   "types": "./dist/index.d.ts",
   "style": "./rmc.css",

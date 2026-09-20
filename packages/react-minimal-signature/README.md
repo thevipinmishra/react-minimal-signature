@@ -1,7 +1,16 @@
 # react-minimal-signature
 
-[![npm version](https://img.shields.io/npm/v/react-minimal-signature.svg?style=flat-square)](https://www.npmjs.com/package/react-awesome-library)
+[![Deprecated](https://img.shields.io/badge/status-deprecated-red.svg)](https://www.npmjs.com/package/signetpad)
+[![npm version](https://img.shields.io/npm/v/react-minimal-signature.svg?style=flat-square)](https://www.npmjs.com/package/react-minimal-signature)
 [![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
+
+**Deprecated.** This package is no longer maintained. Use [SignetPad](https://www.npmjs.com/package/signetpad) instead.
+
+```bash
+npm install signetpad
+```
+
+This repository will be archived. The rest of this README is for existing installs of `react-minimal-signature` only.
 
 A minimal and easy to use Signature Pad component for React applications, requires React version 18 or above.
 
@@ -90,7 +99,7 @@ export default App;
 
 ## Contributing
 
-Any improvements or suggestions are welcome. Feel free to open an issue or submit a pull request.
+This package is deprecated. Do not open issues or pull requests here. Use [SignetPad](https://www.npmjs.com/package/signetpad) instead.
 
 ## License
 
